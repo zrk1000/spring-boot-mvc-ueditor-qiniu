@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.baidu.ueditor.define.AppInfo;
 import com.baidu.ueditor.define.BaseState;
+import com.baidu.ueditor.define.FileType;
 import com.baidu.ueditor.define.State;
 
 @Component
@@ -26,7 +27,7 @@ public class BinaryUploader {
 		
 		MultipartFile file = ((MultipartHttpServletRequest)request).getFile("upfile");
 		
-		String suffix = file.getOriginalFilename().substring(file.getOriginalFilename().indexOf("."));
+		String suffix = FileType.getSuffixByFilename(file.getOriginalFilename());
 		
 		long maxSize = ((Long) conf.get("maxSize")).longValue();
 		if (!validType(suffix, (String[]) conf.get("allowFiles"))) {

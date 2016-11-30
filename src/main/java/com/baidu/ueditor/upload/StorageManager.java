@@ -13,6 +13,7 @@ import org.apache.commons.io.FileUtils;
 
 import com.baidu.ueditor.define.AppInfo;
 import com.baidu.ueditor.define.BaseState;
+import com.baidu.ueditor.define.FileType;
 import com.baidu.ueditor.define.State;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
@@ -140,6 +141,7 @@ public class StorageManager {
 	}
 	
 	private static String getFileName(String fileName) {
-		return new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date())+ (int)(Math.random()*9000 +1000) + fileName.substring(fileName.lastIndexOf("."));
+		String suffix =  FileType.getSuffixByFilename(fileName);
+		return new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date())+ (int)(Math.random()*9000 +1000) + suffix;
 	}
 }
