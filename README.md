@@ -1,6 +1,16 @@
 # spring-boot-mvc-ueditor-qiniu
 spring boot 、springMVC环境集成百度ueditor富文本编辑器，使用七牛云存储图片
 
+依赖库版本：
+- spring boot ：1.5.3.RELEASE
+- qiniu-sdk :   [7.2.0, 7.2.99]
+- 基于ueditor 1.4.3.3版本源码修改
+
+此版本更新说明：
+- 将spring-boot-mvc-ueditor-qiniu源码与demo放入同一个maven项目中
+- 更新了spring boot版本，七牛sdk版本
+- 增加了ueditor.zone属性，可配置七牛服务器区域Zone
+
 **源码：https://github.com/zrk1000/spring-boot-mvc-ueditor-qiniu**</br>
 **博客：http://blog.csdn.net/zrk1000/article/details/53283964**</br>
 
@@ -11,6 +21,7 @@ spring boot 、springMVC环境集成百度ueditor富文本编辑器，使用七�
 
 1、引入jar (源码在github，请自行编译后再引入)：
 ```
+<!--注意：此版本与上个版本maven坐标不同,-->
 <dependency>
     <groupId>com.zrk1000</groupId>
     <artifactId>spring-boot-mvc-ueditor-qiniu</artifactId>
