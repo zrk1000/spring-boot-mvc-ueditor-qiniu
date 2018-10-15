@@ -59,7 +59,7 @@ ueditor.secret-key=400iGAeaeJyjgSm26-wT8R-HQYZbBR1el_cDiRIq
 #七牛机房  华东：zone0 华北：zone1 华南：zone2 北美：zoneNa0
 # ueditor.zone也可不配置，会自动识别区域
 ueditor.zone=zone0
-#zrk-test 华东
+#zrk-test 华东 (请改为自己七牛bucket及域名，否则图片无法查看和上传)
 ueditor.bucket=zrk-test
 ueditor.base-url=http://od710rrnd.bkt.clouddn.com
 #zrk-test-huabei 华北
